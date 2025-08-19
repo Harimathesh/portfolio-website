@@ -8,11 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #6c5ce7;
-            --secondary: #a29bfe;
-            --dark: #2d3436;
-            --light: #f5f6fa;
-            --accent: #fd79a8;
+            --primary: #2E7D32;
+            --secondary: #4CAF50;
+            --dark: #1B5E20;
+            --light: #FFFFFF;
+            --accent: #FFC107;
+            --background: #E8F5E9;
         }
         
         * {
@@ -23,8 +24,8 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--dark);
-            color: var(--light);
+            background-color: var(--background);
+            color: #333;
             overflow-x: hidden;
             line-height: 1.6;
         }
@@ -41,13 +42,14 @@
             align-items: center;
             z-index: 1000;
             backdrop-filter: blur(10px);
-            background-color: rgba(45, 52, 54, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--light);
+            color: var(--dark);
             text-decoration: none;
         }
         
@@ -61,7 +63,7 @@
         }
         
         .nav-links a {
-            color: var(--light);
+            color: var(--dark);
             text-decoration: none;
             font-weight: 500;
             position: relative;
@@ -98,7 +100,7 @@
             height: 300px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             border: 5px solid var(--primary);
             transition: all 0.3s ease;
         }
@@ -112,18 +114,13 @@
 
         .profile-image-container:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(108, 92, 231, 0.4);
+            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.3);
         }
 
         .profile-image-container:hover .profile-image {
             transform: scale(1.05);
         }
 
-        /* Remove the tech icons from original code */
-        .tech-icons {
-            display: none;
-        }
-        
         /* Sections */
         section {
             min-height: 100vh;
@@ -136,7 +133,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: var(--dark);
+            background: linear-gradient(135deg, var(--light) 0%, var(--background) 100%);
             gap: 3rem;
         }
         
@@ -149,6 +146,7 @@
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
+            color: var(--dark);
         }
         
         .home-content h1 span {
@@ -165,6 +163,7 @@
         .home-content p {
             font-size: 1rem;
             margin-bottom: 2rem;
+            color: #555;
         }
         
         .social-icons {
@@ -180,14 +179,15 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(108, 92, 231, 0.2);
-            color: var(--light);
+            background-color: rgba(46, 125, 50, 0.2);
+            color: var(--dark);
             font-size: 1.2rem;
             transition: all 0.3s ease;
         }
         
         .social-icons a:hover {
             background-color: var(--primary);
+            color: var(--light);
             transform: translateY(-5px);
         }
         
@@ -206,14 +206,15 @@
         
         .btn:hover {
             background-color: var(--accent);
+            color: var(--dark);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(253, 121, 168, 0.3);
+            box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
         }
         
         /* Projects Section */
         #projects {
             background-color: var(--light);
-            color: var(--dark);
+            color: #333;
         }
         
         .section-title {
@@ -221,6 +222,7 @@
             font-size: clamp(2rem, 5vw, 2.5rem);
             margin-bottom: 3rem;
             position: relative;
+            color: var(--dark);
         }
         
         .section-title::after {
@@ -245,16 +247,17 @@
             background-color: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             padding: 2rem;
             display: flex;
             flex-direction: column;
+            border-top: 4px solid var(--primary);
         }
         
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.15);
         }
         
         .project-info {
@@ -281,7 +284,7 @@
         }
         
         .tech-item {
-            background-color: rgba(108, 92, 231, 0.1);
+            background-color: rgba(46, 125, 50, 0.1);
             color: var(--primary);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -289,7 +292,7 @@
             font-weight: 600;
         }
         
-        /* AI Assistant Section */
+        /* AI Assistant Section - FIXED */
         .assistant-icon-container {
             position: fixed;
             bottom: 30px;
@@ -306,7 +309,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 5px 20px rgba(108, 92, 231, 0.5);
+            box-shadow: 0 5px 20px rgba(46, 125, 50, 0.4);
             transition: all 0.3s ease;
         }
         
@@ -325,16 +328,21 @@
             bottom: 100px;
             right: 30px;
             width: 350px;
+            height: auto;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             z-index: 1001;
             display: none;
             overflow: hidden;
+            border: 1px solid var(--secondary);
+            flex-direction: column;
         }
         
         .assistant-container {
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .assistant-header {
@@ -343,6 +351,7 @@
             padding: 1rem;
             background-color: var(--primary);
             color: white;
+            flex-shrink: 0;
         }
         
         .assistant-header h2 {
@@ -351,10 +360,13 @@
         }
         
         .chat-container {
+            flex: 1;
             height: 300px;
             overflow-y: auto;
             padding: 1rem;
             background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
         }
         
         .message {
@@ -363,18 +375,22 @@
             border-radius: 8px;
             max-width: 80%;
             font-size: 0.9rem;
+            word-wrap: break-word;
         }
         
         .user-message {
             background-color: var(--primary);
             color: white;
             margin-left: auto;
+            margin-right: 0;
         }
         
         .bot-message {
-            background-color: #eee;
+            background-color: #e8f5e9;
             color: var(--dark);
             margin-right: auto;
+            margin-left: 0;
+            border-left: 3px solid var(--primary);
         }
         
         .input-container {
@@ -382,6 +398,7 @@
             padding: 0.5rem;
             background-color: white;
             border-top: 1px solid #eee;
+            flex-shrink: 0;
         }
         
         #user-input {
@@ -406,12 +423,13 @@
         
         #send-btn:hover {
             background-color: var(--accent);
+            color: var(--dark);
         }
         
         /* Contact Section */
         #contact {
             background-color: var(--light);
-            color: var(--dark);
+            color: #333;
             padding: 4rem 5%;
         }
         
@@ -442,7 +460,7 @@
         }
         
         .contact-item a {
-            color: var(--dark);
+            color: #333;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -451,102 +469,88 @@
             color: var(--primary);
         }
         
-        /* Education Section */
+        /* Education Section - Redesigned */
         #education {
-            background-color: var(--dark);
+            background: linear-gradient(to bottom, var(--light) 0%, var(--background) 100%);
+            color: #333;
         }
         
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 3rem auto 0;
+        .education-header {
+            text-align: center;
+            margin-bottom: 3rem;
         }
         
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--primary);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
+        .education-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: var(--light);
-            border: 4px solid var(--primary);
-            border-radius: 50%;
-            top: 15px;
-            z-index: 1;
-        }
-        
-        .left {
-            left: 0;
-        }
-        
-        .right {
-            left: 50%;
-        }
-        
-        .left::after {
-            right: -12px;
-        }
-        
-        .right::after {
-            left: -12px;
-        }
-        
-        .timeline-content {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
+        .education-card {
+            display: flex;
+            background: white;
             border-radius: 10px;
-            backdrop-filter: blur(10px);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
         }
         
-        .timeline-content h3 {
-            font-size: 1.2rem;
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.15);
+        }
+        
+        .education-date {
+            min-width: 120px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .education-content {
+            padding: 2rem;
+            flex: 1;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .education-content h3 {
+            font-size: 1.4rem;
             margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .education-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .education-content p {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        
+        .education-score {
+            display: inline-block;
+            background-color: rgba(76, 175, 80, 0.2);
             color: var(--primary);
-        }
-        
-        .timeline-content h4 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
-        }
-        
-        .timeline-content p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        .timeline-date {
-            color: var(--accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
             font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .percentage {
-            color: var(--secondary);
-            font-weight: 600;
+            margin-top: 0.5rem;
         }
         
         /* Skills Section */
         #skills {
             background-color: var(--light);
-            color: var(--dark);
+            color: #333;
             padding: 4rem 5%;
         }
 
@@ -565,13 +569,14 @@
             padding: 1.5rem;
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
+            border-top: 3px solid var(--primary);
         }
 
         .skill-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.15);
         }
 
         .skill-item i {
@@ -609,12 +614,12 @@
         }
         
         .footer-links a:hover {
-            color: var(--primary);
+            color: var(--accent);
         }
         
         .copyright {
             font-size: 0.9rem;
-            color: #aaa;
+            color: #ccc;
         }
         
         /* Responsive Design */
@@ -659,12 +664,13 @@
                 right: -100%;
                 width: 80%;
                 height: 100vh;
-                background-color: var(--dark);
+                background-color: var(--light);
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 gap: 3rem;
                 transition: all 0.5s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
             }
             
             .nav-links.active {
@@ -678,28 +684,22 @@
             
             .hamburger i {
                 font-size: 1.8rem;
+                color: var(--dark);
             }
             
-            .timeline::after {
-                left: 31px;
+            /* Education card responsive */
+            .education-card {
+                flex-direction: column;
             }
             
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
+            .education-date {
+                min-width: 100%;
+                padding: 1rem;
             }
             
-            .timeline-item::after {
-                left: 21px;
-            }
-            
-            .left::after, .right::after {
-                left: 21px;
-            }
-            
-            .right {
-                left: 0;
+            .education-content {
+                border-left: none;
+                border-top: 4px solid var(--secondary);
             }
             
             /* Adjust AI assistant for mobile */
@@ -791,6 +791,23 @@
             .skill-item span {
                 font-size: 0.8rem;
             }
+            
+            .education-date {
+                font-size: 0.9rem;
+            }
+            
+            .education-content h3 {
+                font-size: 1.2rem;
+            }
+            
+            .education-content h4 {
+                font-size: 1rem;
+            }
+            
+            #ai-assistant {
+                width: 95%;
+                right: 2.5%;
+            }
         }
     </style>
 </head>
@@ -880,8 +897,8 @@
         </div>
     </div>
     
-    <!-- AI Assistant Chat Box -->
-    <section id="ai-assistant">
+    <!-- AI Assistant Chat Box - FIXED LAYOUT -->
+    <div id="ai-assistant">
         <div class="assistant-container">
             <div class="assistant-header">
                 <i class="fas fa-robot"></i>
@@ -897,41 +914,41 @@
                 <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
-    </section>
+    </div>
     
-    <!-- Education Section -->
+    <!-- Education Section - Redesigned -->
     <section id="education">
         <h2 class="section-title">My <span>Education</span></h2>
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-content">
-                    <div class="timeline-date">2021 - 2024</div>
+        <div class="education-container">
+            <div class="education-card">
+                <div class="education-date">2021 - 2024</div>
+                <div class="education-content">
                     <h3>Bachelor of Science</h3>
                     <h4>Computer Science</h4>
                     <p>Sri Krishna Arts and Science College</p>
                     <p>Specialized in Computer Science with focus on programming, data structures, and software development</p>
-                    <p class="percentage">CGPA: 9.0</p>
+                    <span class="education-score">CGPA: 9.0</span>
                 </div>
             </div>
             
-            <div class="timeline-item right">
-                <div class="timeline-content">
-                    <div class="timeline-date">2020 - 2022</div>
+            <div class="education-card">
+                <div class="education-date">2020 - 2022</div>
+                <div class="education-content">
                     <h3>Higher Secondary (12th Grade)</h3>
                     <h4>CBSE - Science Stream</h4>
                     <p>Saratha International School</p>
                     <p>Specialized in Computer Science and Mathematics</p>
-                    <p class="percentage">Percentage: 81%</p>
+                    <span class="education-score">Percentage: 81%</span>
                 </div>
             </div>
             
-            <div class="timeline-item left">
-                <div class="timeline-content">
-                    <div class="timeline-date">2019 - 2020</div>
+            <div class="education-card">
+                <div class="education-date">2019 - 2020</div>
+                <div class="education-content">
                     <h3>Secondary School (10th Grade)</h3>
                     <h4>SSLC</h4>
                     <p>St. Jude's Public School and Junior College, Kotagiri</p>
-                    <p class="percentage">Percentage: 70.83%</p>
+                    <span class="education-score">Percentage: 70.83%</span>
                 </div>
             </div>
         </div>
@@ -994,6 +1011,16 @@
             <div class="skill-item">
                 <i class="fas fa-code" style="color: #007ACC"></i>
                 <span>VS Code</span>
+            </div>
+
+            <div class="skill-item">
+                <i class="fab fa-vuejs" style="color: #4FC08D"></i>
+                <span>Vue JS</span>
+            </div>
+
+            <div class="skill-item">
+                <i class="fas fa-database" style="color: #47A248"></i>
+                <span>MongoDB</span>
             </div>
         </div>
     </section>
@@ -1080,7 +1107,7 @@
         
         // Animation on scroll
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.project-card, .timeline-item, .skill-item');
+            const elements = document.querySelectorAll('.project-card, .education-card, .skill-item');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -1094,7 +1121,7 @@
         };
         
         // Set initial state for animated elements
-        document.querySelectorAll('.project-card, .timeline-item, .skill-item').forEach(element => {
+        document.querySelectorAll('.project-card, .education-card, .skill-item').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(50px)';
             element.style.transition = 'all 0.5s ease';
@@ -1114,7 +1141,14 @@
         // Toggle assistant window
         assistantIcon.addEventListener('click', () => {
             assistantVisible = !assistantVisible;
-            assistantWindow.style.display = assistantVisible ? 'block' : 'none';
+            assistantWindow.style.display = assistantVisible ? 'flex' : 'none';
+            
+            // Focus on input when assistant opens
+            if (assistantVisible) {
+                setTimeout(() => {
+                    userInput.focus();
+                }, 100);
+            }
         });
         
         function addMessage(message, isUser) {
